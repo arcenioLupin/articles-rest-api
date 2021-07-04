@@ -1,5 +1,5 @@
 import { Document } from "mongoose";
-export interface Product extends Document {
+export interface Article extends Document {
    readonly name: string;
    readonly description : string;
    readonly imageURL: string;
