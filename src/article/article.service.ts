@@ -25,6 +25,7 @@ export class ArticleService {
   }
 
    async deleteArticle(articleId: string): Promise<Article>{
+      console.log('articleId: ',articleId)
       const deletedArticle = await this.articleModel.findByIdAndDelete(articleId)
       return deletedArticle; 
   }

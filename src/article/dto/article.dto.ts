@@ -3,4 +3,5 @@ export class CreateArticleDTO{
     readonly storyTitle: string;
     readonly author: string;
     readonly createdAt: Date;
+    readonly storyUrl: string;
 }

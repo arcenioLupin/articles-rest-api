@@ -23,14 +23,14 @@ export class AppService {
     .then(res => res.json())
     .then (json => 
        {
-        console.log(json.hits)
         let articles = json.hits
         articles.map(article =>{
          let createArticleDTO = {
              title : article.title,
              storyTitle: article.story_title,
              author: article.author,
-             createdAt: article.created_at
+             createdAt: article.created_at,
+             storyUrl: article.story_url
          }         
           this.insertArticle(createArticleDTO)
                    
@@ -38,7 +38,6 @@ export class AppService {
        }
       
       ); 
-
     this.logger.debug('Called when the current minute is 55');
   }
 
